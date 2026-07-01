@@ -12,7 +12,7 @@ The terminal token generation pipeline treats text prediction as a matrix multip
 The technical mitigation of the Softmax Bottleneck has transitioned from early low-rank vocabularies to explicit multi-pass mixture mappings, moving toward modern low-rank latent KV caches and optimized test-time search verifiers.
 
 
-```
+```mermaid
 [Standard Flat Softmax Layer (1989/2014)] ───> [Mixture of Softmaxes (MoS, 2017)] ───> [Latent Low-Rank Deconvolutions (MLA, 2025+)](Rigid Low-Rank Matrix Ceiling)             (Parallel Continuous Contextual Mixtures)         (Deep Key-Value Cache Parameter Splitting)
 ```
 
