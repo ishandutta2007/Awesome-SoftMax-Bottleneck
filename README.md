@@ -4,6 +4,19 @@
   <img src="assets/banner.svg" alt="SoftMax Bottleneck Banner" width="100%" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+</p>
+
+---
+
+### 🔍 Metadata & SEO Overview
+- **Primary Focus:** Deep analysis of the Softmax Bottleneck, Mixture of Softmaxes (MoS), Multi-Head Latent Attention (MLA), and output layer optimization.
+- **Target Audience:** AI Researchers, Machine Learning Engineers, LLM Infrastructure Developers, and NLP Specialists.
+- **Keywords:** Softmax Bottleneck, Mixture of Softmaxes, MoS, Multi-Head Latent Attention, MLA, Hierarchical Softmax, Adaptive Embeddings, Knowledge Distillation, Triton Fused Kernels, LLM Inference Optimization, PagedAttention.
+
+---
+
 ## 🧠 Softmax Bottleneck in AI: History, Progression, Variants, & Applications
 
 The **Softmax Bottleneck** is a foundational theoretical and structural limitation in natural language processing and autoregressive language modeling. First mathematically formalized by Yang et al. in 2017 ("Breaking the Softmax Bottleneck: Large Language Models via Conditional Contextual Outputs"), it highlights a core capacity mismatch at the terminal output layer of traditional Transformer and recurrent architectures. 
