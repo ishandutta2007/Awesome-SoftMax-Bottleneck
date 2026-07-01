@@ -35,21 +35,21 @@ flowchart LR
 
 Architectural setups designed to bypass or mitigate the Softmax Bottleneck are strictly categorized based on the mathematical transformations they apply to the log-probability matrix.
 
-### A. Mixture of Softmaxes (MoS)
-*   **Mechanism:** Formulates the final token output layer as a weighted combination of $K$ independent Softmax distributions:
-    $$P(y|x) = \sum_{k=1}^{K} \pi_k(x) \frac{\exp(h_x^k \cdot w_y)}{\sum_{y'} \exp(h_x^k \cdot w_{y'})}$$
-*   **Pros:** Radically expands the mathematical rank of the logit matrix, enabling the model to capture dense, multi-faceted word associations precisely.
+-  ### A. Mixture of Softmaxes (MoS)
+	*   **Mechanism:** Formulates the final token output layer as a weighted combination of $K$ independent Softmax distributions:
+	    $$P(y|x) = \sum_{k=1}^{K} \pi_k(x) \frac{\exp(h_x^k \cdot w_y)}{\sum_{y'} \exp(h_x^k \cdot w_{y'})}$$
+	*   **Pros:** Radically expands the mathematical rank of the logit matrix, enabling the model to capture dense, multi-faceted word associations precisely.
 
-### B. Mixture of Experts Softmax (MoE-Output)
-*   **Mechanism:** Extends MoS by routing the terminal output projection through sparsely activated expert blocks. A dynamic gating network selects only a tiny subset of specialized vocabulary experts to compute the terminal logits per token step.
-*   **Pros:** Decouples total vocabulary capacity from active token compute costs, bypassing the bottleneck over massive multilingual dictionaries.
+-  ### B. Mixture of Experts Softmax (MoE-Output)
+	*   **Mechanism:** Extends MoS by routing the terminal output projection through sparsely activated expert blocks. A dynamic gating network selects only a tiny subset of specialized vocabulary experts to compute the terminal logits per token step.
+	*   **Pros:** Decouples total vocabulary capacity from active token compute costs, bypassing the bottleneck over massive multilingual dictionaries.
 
-### C. Hierarchical Softmax (Tree-Structured Modification)
-*   **Mechanism:** Replaces the flat vocabulary array with a balanced binary tree layout (such as a Huffman tree). The model computes a series of sequential branch selections rather than evaluating all tokens simultaneously.
-*   **Pros:** Drops computational time complexity from linear scaling ($O(|V|)$) down to logarithmic scaling ($O(\log |V|)$), bypassing the bottleneck by breaking the dense matrix structure.
+-  ### C. Hierarchical Softmax (Tree-Structured Modification)
+	*   **Mechanism:** Replaces the flat vocabulary array with a balanced binary tree layout (such as a Huffman tree). The model computes a series of sequential branch selections rather than evaluating all tokens simultaneously.
+	*   **Pros:** Drops computational time complexity from linear scaling ($O(|V|)$) down to logarithmic scaling ($O(\log |V|)$), bypassing the bottleneck by breaking the dense matrix structure.
 
-### D. Continuous Logit Shifting / Temperature Calibration
-*   **Mechanism:** Injects dynamic, context-aware scaling factors straight into the unnormalized log-odds vectors right before sampling occurs, altering the geometric distribution profile without altering model parameters.
+-  ### D. Continuous Logit Shifting / Temperature Calibration
+	*   **Mechanism:** Injects dynamic, context-aware scaling factors straight into the unnormalized log-odds vectors right before sampling occurs, altering the geometric distribution profile without altering model parameters.
 
 ---
 
