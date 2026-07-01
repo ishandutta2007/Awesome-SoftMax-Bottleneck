@@ -13,7 +13,10 @@ The technical mitigation of the Softmax Bottleneck has transitioned from early l
 
 
 ```mermaid
-[Standard Flat Softmax Layer (1989/2014)] ───> [Mixture of Softmaxes (MoS, 2017)] ───> [Latent Low-Rank Deconvolutions (MLA, 2025+)](Rigid Low-Rank Matrix Ceiling)             (Parallel Continuous Contextual Mixtures)         (Deep Key-Value Cache Parameter Splitting)
+flowchart LR
+    A["Standard Flat Softmax Layer (1989/2014)<br/>(Rigid Low-Rank Matrix Ceiling)"]
+    --> B["Mixture of Softmaxes (MoS, 2017)<br/>(Parallel Continuous Contextual Mixtures)"]
+    --> C["Latent Low-Rank Decompositions (MLA, 2025+)<br/>(Deep Key-Value Cache Parameter Splitting)"]
 ```
 
 *   **The Flat Linear Projection Era (Traditional Language Modeling, Pre-2017)**
