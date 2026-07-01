@@ -1,5 +1,10 @@
-# Awesome-SoftMax-Bottleneck
-## Softmax Bottleneck in AI: History, Progression, Variants, & Applications
+# Awesome SoftMax Bottleneck 🍾
+
+<p align="center">
+  <img src="assets/banner.svg" alt="SoftMax Bottleneck Banner" width="100%" />
+</p>
+
+## 🧠 Softmax Bottleneck in AI: History, Progression, Variants, & Applications
 
 The **Softmax Bottleneck** is a foundational theoretical and structural limitation in natural language processing and autoregressive language modeling. First mathematically formalized by Yang et al. in 2017 ("Breaking the Softmax Bottleneck: Large Language Models via Conditional Contextual Outputs"), it highlights a core capacity mismatch at the terminal output layer of traditional Transformer and recurrent architectures. 
 
@@ -7,7 +12,7 @@ The terminal token generation pipeline treats text prediction as a matrix multip
 
 ---
 
-## 1. The Macro Chronological Evolution
+## ⏳ 1. The Macro Chronological Evolution
 
 The technical mitigation of the Softmax Bottleneck has transitioned from early low-rank vocabularies to explicit multi-pass mixture mappings, moving toward modern low-rank latent KV caches and optimized test-time search verifiers.
 
@@ -27,7 +32,7 @@ flowchart LR
 
 ---
 
-## 2. Core Functional & Algorithmic Variants
+## ⚙️ 2. Core Functional & Algorithmic Variants
 
 Architectural setups designed to bypass or mitigate the Softmax Bottleneck are strictly categorized based on the mathematical transformations they apply to the log-probability matrix.
 
@@ -40,7 +45,7 @@ Architectural setups designed to bypass or mitigate the Softmax Bottleneck are s
 
 ---
 
-## 3. Structural Evaluation Spaces & Loss Paradigms
+## 📊 3. Structural Evaluation Spaces & Loss Paradigms
 
 To train models to break past low-rank constraints without blowing up cloud compute budgets, engineering pipelines leverage specialized training objectives.
 
@@ -52,7 +57,7 @@ To train models to break past low-rank constraints without blowing up cloud comp
 
 ---
 
-## 4. Production Engineering Challenges & Hardware Solutions
+## 🛠️ 4. Production Engineering Challenges & Hardware Solutions
 
 Enforcing complex, high-rank multi-softmax configurations across large-scale commercial infrastructures introduces intense VRAM memory and memory-bus bottlenecks.
 
@@ -63,7 +68,7 @@ Enforcing complex, high-rank multi-softmax configurations across large-scale com
 
 ---
 
-## 5. Frontier Real-World AI Applications
+## 🚀 5. Frontier Real-World AI Applications
 
 | Frontier Application | Year | First-Use Paper | Details |
 | :--- | :--- | :--- | :--- |
@@ -73,7 +78,7 @@ Enforcing complex, high-rank multi-softmax configurations across large-scale com
 
 ---
 
-## References
+## 📚 References
 1. Bridle, J. S. (1989). Training stochastic model classifiers, including the softmax as an alternative to the von Mises. *Advances in Neural Information Processing Systems (NeurIPS)*, 2, 211-217.
 2. Mnih, A., & Teh, Y. W. (2012). A fast and simple algorithm for training neural probabilistic language models. *International Conference on Machine Learning (ICML)*.
 3. Shazeer, N., et al. (2017). Outrageously large neural networks: The sparsely-gated mixture-of-experts layer. *arXiv preprint arXiv:1701.06538*.

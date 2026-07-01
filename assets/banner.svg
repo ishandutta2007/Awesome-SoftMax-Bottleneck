@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradient -->
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Shimmer Effect -->
+    <linearGradient id="shimmer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="200" fill="url(#bgGrad)" rx="10" />
+
+  <!-- Dynamic Animated background nodes/particles -->
+  <g opacity="0.3">
+    <circle cx="100" cy="50" r="3" fill="#818cf8">
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="700" cy="150" r="4" fill="#c084fc">
+      <animate attributeName="opacity" values="0.8;0.2;0.8" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="400" cy="180" r="2" fill="#6366f1">
+      <animate attributeName="opacity" values="0.1;0.9;0.1" dur="2.5s" repeatCount="indefinite" />
+    </circle>
+  </g>
+
+  <!-- Neural Network Connections / Lines (Dynamic Grid) -->
+  <path d="M 50 100 Q 200 50 400 100 T 750 100" fill="none" stroke="url(#glowGrad)" stroke-width="2" opacity="0.5" stroke-dasharray="10 5">
+    <animate attributeName="stroke-dashoffset" values="0;150" dur="15s" repeatCount="indefinite" />
+  </path>
+  <path d="M 50 120 Q 200 170 400 120 T 750 120" fill="none" stroke="url(#glowGrad)" stroke-width="1" opacity="0.3" stroke-dasharray="5 5">
+    <animate attributeName="stroke-dashoffset" values="150;0" dur="12s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Text Section -->
+  <g transform="translate(400, 100)" text-anchor="middle">
+    <!-- Title -->
+    <text font-family="'Outfit', 'Inter', sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="4" y="-10">
+      SOFTMAX BOTTLENECK
+    </text>
+    <!-- Subtitle -->
+    <text font-family="'Inter', sans-serif" font-size="16" font-weight="500" fill="#a5b4fc" letter-spacing="6" y="30">
+      HISTORY • PROGRESSION • VARIANTS
+    </text>
+  </g>
+
+  <!-- Animated Glowing Border -->
+  <rect x="2" y="2" width="796" height="196" rx="8" fill="none" stroke="url(#glowGrad)" stroke-width="2" opacity="0.7">
+    <animate attributeName="stroke-opacity" values="0.4;0.9;0.4" dur="4s" repeatCount="indefinite" />
+  </rect>
+</svg>
