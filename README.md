@@ -106,6 +106,18 @@ To advance this section of your repository, benchmarking architecture, or MLOps 
 * Generate a **comprehensive Markdown table** explicitly comparing Standard Flat Softmax, Hierarchical Softmax, Mixture of Softmaxes (MoS), and Multi-Head Latent Attention (MLA) across mathematical rank constraints, computational complexity bounds, inference VRAM overhead footprints, and target vocabulary scales.
 * Establish a **performance evaluation harness using Triton** to profile exactly how compiling a fused max-subtracted online softmax kernel directly into fast registers alters the wall-clock processing throughput of massive vocabulary pre-fill phases.
 
+
+##  Star History
+<div align="center">
+<a href="https://www.star-history.com/?repos=ishandutta2007%2FAwesome-SoftMax-Bottleneck&type=date&legend=bottom-right">
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-SoftMax-Bottleneck&type=date&theme=dark&legend=bottom-right" />
+<source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-SoftMax-Bottleneck&type=date&legend=bottom-right" />
+<img alt="Star History Chart" src="https://api.star-history.com/chart?repos=ishandutta2007/Awesome-SoftMax-Bottleneck&type=date&legend=bottom-right" />
+</picture>
+</a>
+</div>
+
 ***
 
 **Proactive Repository Follow-Ups:**
